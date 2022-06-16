@@ -1,0 +1,49 @@
+<form class="form-container" (ngSubmit) ="onSubmit(f)" #f="ngForm">
+    <mat-card class="reactive-card">
+    <mat-card-header>
+  <mat-card-title>Personal Information</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field ngModel class="full-width">
+          <input ngModel name="firstname" matInput placeholder="First Name" required >
+  
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field  class="full-width">
+          <input ngModel name="lastname" matInput placeholder="Last Name" required>
+         
+        </mat-form-field>
+      </div>
+  
+      <div class="col-md-6">
+        <mat-form-field ngModel class="full-width">
+          <input ngModel="email"  name="email" matInput placeholder="Email" required email>
+          <mat-error *ngIf="email.invalid && email.touched">Email is invalid</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <mat-form-field  class="full-width">
+          <input  name="address" matInput placeholder="Address" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 top-padding">
+        <mat-form-field  class="full-width" appearance="fill">
+          <mat-label>Select DOB</mat-label>
+          <input  name="dob" matInput [matDatepicker]="picker" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="warn">Save</button>
+  </mat-card-actions>
+    </mat-card>
+  </form>
