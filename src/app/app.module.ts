@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -16,12 +16,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { AssignmentComponent } from './assignment/assignment.component';
 
 
 const appRoutes: Routes=[
   {path: '', component: HomepageComponent },
   {path: 'tdform', component: TDFormComponent },
-  {path: 'rform', component:ReactiveformComponent }
+  {path: 'rform', component:ReactiveformComponent },
+  {path: 'assignment', component:AssignmentComponent}
 ];
 
 @NgModule({
@@ -29,7 +31,8 @@ const appRoutes: Routes=[
     AppComponent,
     HomepageComponent,
     TDFormComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    AssignmentComponent
    
   ],
   imports: [
@@ -44,7 +47,8 @@ const appRoutes: Routes=[
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
