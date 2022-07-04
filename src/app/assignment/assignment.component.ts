@@ -14,6 +14,8 @@ export class AssignmentComponent implements OnInit {
   answer6: any=[];
   answer7: any=[];
   answer8: any=[];
+  answer5a: any=[];
+  answer5b: any=[];
 
 
   constructor() { }
@@ -23,7 +25,7 @@ export class AssignmentComponent implements OnInit {
     this.question2();
     this.question3();
     this.question4();
-    this.question5();
+    this.question5(2000);
     this.question6();
     this.question7();
     this.question8();
@@ -157,57 +159,61 @@ users.forEach((user) => {
  });
 }    
 
-question5(){
+question5(year:number){
 let arr3 = [
   {
-    "carMake": "Audi",
-    "modelYear": 2002
+    carMake: "Audi",
+    modelYear: 2002
   },
   {
-    "carMake": "Jaguar",
-    "modelYear": 2008
+    carMake: "Jaguar",
+    modelYear: 2008
   },
   {
-    "carMake": "Nissan",
-    "modelYear": 1991
+    carMake: "Nissan",
+    modelYear: 1991
   },
   {
-    "carMake": "Land Rover",
-    "modelYear": 1995
+    carMake: "Land Rover",
+    modelYear: 1995
   },
   {
-    "carMake": "Infiniti",
-    "modelYear": 2009
+    carMake: "Infiniti",
+    modelYear: 2009
   },
   {
-    "carMake": "Pontiac",
-    "modelYear": 2007
+    carMake: "Pontiac",
+    modelYear: 2007
   },
   {
-    "carMake": "Dodge",
-    "modelYear": 1996
+    carMake: "Dodge",
+    modelYear: 1996
   },
   {
-    "carMake": "Chrysler",
-    "modelYear": 2012
+    carMake: "Chrysler",
+    modelYear: 2012
   },
   {
-    "carMake": "Lexus",
-    "modelYear": 2003
+    carMake: "Lexus",
+    modelYear: 2003
   },
   {
-    "carMake": "Ford",
-    "modelYear": 1992
+    carMake: "Ford",
+    modelYear: 1992
   }
 ]
-let year1 =[];
-this.answer5= arr3;
-arr3.forEach((year) => {
-  let years = (year.modelYear > 1990);
-   return year1.push(years);
-});
+this.answer5a = arr3;
+console.log("answer 5a", this.answer5a)
+
+arr3.forEach((car) => {
+  let carMakeYear = car.carMake + ' ' + car.modelYear;
+  if (car.modelYear > year) {
+   this.answer5b.push({ carMakeYear })
+  }console.log("answer 5b", this.answer5b)
+  });
+}
   
-  }
+  
 
 question6(){
 const transactions=[
@@ -330,12 +336,17 @@ const transactionsDesc = [
   }
 ]
 
-  var startDate= "1-02-2020";
-  var endDate = "29-02-2020";
-  var trans = transactions.filter(function(a){
-    return ((a.date)>startDate && (a.date)<endDate);
-  });this.answer7 = trans;
- ;
+let money = transactions.filter((bank: any) => {
+  const date = new Date(bank.date);  // 2009-11-10
+
+  // Get the month as a number (0-11)
+  const month = date.getMonth();
+  const year = date.getFullYear();
+
+  if (month === 1) {
+    return bank;
+  }
+});this.answer7 =money
 }
 
 

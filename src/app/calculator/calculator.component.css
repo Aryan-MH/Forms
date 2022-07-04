@@ -1,0 +1,11 @@
+.cal{
+    border:2px solid black;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.container{
+    text-align: center;
+}
+.line{
+    border-top: 1px dashed black;
+}

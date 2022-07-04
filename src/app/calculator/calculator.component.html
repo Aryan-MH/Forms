@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Calculator</h1>
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Input 1</mat-label>
+        <mat-icon matSuffix>grade</mat-icon>
+        <input matInput placeholder="Enter number" [(ngModel)]="num1">
+      </mat-form-field>
+    </p>
+    
+    <p>
+      <mat-form-field>
+        <mat-label>Input 2</mat-label>
+        <mat-icon matSuffix>offline_bolt</mat-icon>
+        <input matInput placeholder="Enter number" [(ngModel)]="num2">
+      </mat-form-field>
+    </p>
+    
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Result</mat-label>
+        <mat-icon matSuffix>redeem</mat-icon>
+        <input matInput placeholder="Result" [(ngModel)]="result">
+      </mat-form-field>
+    </p>
+    
+    <button mat-flat-button color="accent" class="cal" (click)="calci('add')">Add</button>
+    <button mat-flat-button color="warn" class="cal" (click)="calci('sub')">Subtract</button>
+    <button mat-flat-button color="accent" class="cal" (click)="calci('multiply')">Multiply</button>
+    <button mat-flat-button color="primary" class="cal" (click)="calci('divide')">Divide</button>
+    </div>
+    <hr class="line">

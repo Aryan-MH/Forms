@@ -1,4 +1,4 @@
-<form [formGroup]="personalForm" class="form-container" >
+<form [formGroup]="personalForm" class="form-container" class="form" >
     <mat-card class="reactive-card">
     <mat-card-header>
   <mat-card-title>Personal Information</mat-card-title>
@@ -7,17 +7,19 @@
     <div class="row">
       <div class="col-md-6">
         <mat-form-field class="full-width">
-          <input formControlName="firstName" matInput placeholder="First Name" required>
+          <input (keyup)="keyUpTs()"  formControlName="firstName" matInput placeholder="First Name">
+          <mat-error><span style="color: red;" *ngIf="firstName && firstName.errors && firstName.errors['incorrect']" ></span>Name is Invalid</mat-error>
         </mat-form-field>
       </div>
       <div class="col-md-6">
         <mat-form-field class="fill-width">
-          <input formControlName="lastName" matInput placeholder="Last Name" required>
+          <input formControlName="lastName" matInput placeholder="Last Name">
+          <mat-error>First Letter Should Be Capital</mat-error>
         </mat-form-field>
       </div>
       <div class="col-md-6">
         <mat-form-field class="full-width">
-          <input formControlName="email" matInput placeholder="Email" required email>
+          <input formControlName="email" matInput placeholder="Email" email>
           <mat-error>Email is invalid</mat-error>
         </mat-form-field>
       </div>
@@ -25,13 +27,13 @@
     <div class="row">
       <div class="col-sm-6">
         <mat-form-field class="full-width">
-          <input formControlName="address" matInput placeholder="Address" required>
+          <input formControlName="address" matInput placeholder="Address">
         </mat-form-field>
       </div>
       <div class="col-md-6 top-padding">
         <mat-form-field class="full-width" appearance="fill">
           <mat-label>Select DOB</mat-label>
-          <input formControlName="dob" matInput [matDatepicker]="picker" required>
+          <input formControlName="dob" matInput [matDatepicker]="picker">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>

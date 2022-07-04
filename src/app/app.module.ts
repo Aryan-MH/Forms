@@ -17,13 +17,37 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { AssignmentComponent } from './assignment/assignment.component';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { MatIconModule} from '@angular/material/icon';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { ParentbComponent } from './parentb/parentb.component';
+import { ChildbComponent } from './childb/childb.component';
+import { ValuesComponent } from './values/values.component';
+import { PdfconverterComponent } from './pdfconverter/pdfconverter.component';
+import { FlexComponent } from './flex/flex.component';
+import { ProductmanageComponent } from './productmanage/productmanage.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 const appRoutes: Routes=[
   {path: '', component: HomepageComponent },
   {path: 'tdform', component: TDFormComponent },
   {path: 'rform', component:ReactiveformComponent },
-  {path: 'assignment', component:AssignmentComponent}
+  {path: 'assignment', component:AssignmentComponent},
+  {path: 'calculator', component:CalculatorComponent},
+  {path: 'parent', component:ParentComponent},
+  {path: 'parentb', component:ParentbComponent},
+  {path: 'values', component:ValuesComponent},
+  {path: 'pdfconverter', component:PdfconverterComponent},
+  {path: 'flex', component:FlexComponent},
+  {path: 'productmanage', component:ProductmanageComponent}
 ];
 
 @NgModule({
@@ -32,7 +56,17 @@ const appRoutes: Routes=[
     HomepageComponent,
     TDFormComponent,
     ReactiveformComponent,
-    AssignmentComponent
+    AssignmentComponent,
+    CalculatorComponent,
+    ParentComponent,
+    ChildComponent,
+    ParentbComponent,
+    ChildbComponent,
+    ValuesComponent,
+    PdfconverterComponent,
+    FlexComponent,
+    ProductmanageComponent,
+    DialogComponent
    
   ],
   imports: [
@@ -48,7 +82,15 @@ const appRoutes: Routes=[
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatDialogModule,
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

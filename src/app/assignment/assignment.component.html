@@ -1,59 +1,61 @@
-<h1 class="assign">ASSINGNEMENT</h1>
-<hr>
-<h2>Question1 : reverse</h2>
-<p>{{answer1}}</p>
-<hr>
+<div class="container">
+  <div class="card">
+      <div class="card-header">
+          <h1 class="assign">ASSINGNMENT</h1>
+      </div>
+       <h3>1:Question :- Reverse</h3>
+       <p>{{answer1}}</p>
+       <hr>
 
-<h2>Question2 : Sort ana Array</h2>
-<ul>
-    <li *ngFor="let user of answer2">
-        {{user.name}}
-    </li>
-</ul>
-<hr>
+       <h3>2:Question :- Sort ana Array</h3>
+       <ul>
+           <li *ngFor="let user of answer2">
+              {{user.name}}
+           </li>
+       </ul>
+       <hr>
 
-<h2>Question3 :  Create a new array of objects from the following data which only contains one property called 'name' where name = firstName + ' ' + lastName ?</h2>
-<ul>
-    <li *ngFor="let user of answer3">
-       {{user.firstName}} {{user.lastName}}
+        <h3>3:Question :-  Create a new array of objects from the following data which only contains one property called 'name' where name = firstName + ' ' + lastName ?</h3>
+        <ul>
+           <li *ngFor="let user of answer3">
+              {{user.firstName}} {{user.lastName}}
+           </li>
+        </ul>
+        <hr>
 
-    </li>
-</ul>
-<hr>
-
-<h2>Question4 : Concatenate all the names into one string using inbuilt array function. Hint: array.reduce(). Extra: try solving it using loops too ?</h2>
+        <h3>4:Question :- Concatenate all the names into one string using inbuilt array function. Hint: array.reduce(). Extra: try solving it using loops too ?</h3>
  
-    <li *ngFor="let user of answer4">
-        {{user.firstName}} {{user.lastName}}</li>
-<hr>
+        <li *ngFor="let user of answer4">
+         {{user.firstName}} {{user.lastName}}
+        </li>
+        <hr>
 
-<h2>Question5 : Write a function called getCarsMadeAfterYear(year) which will take year as a parameter and return all the cars (objects) made after the value specified in the parameter year.
-</h2>
-<ul>
-   <li *ngFor="let user of answer5">
-    {{user.carMake}} {{user.modelYear}}
+        <h3>5:Question :- Write a function called getCarsMadeAfterYear(year) which will take year as a parameter and return all the cars (objects) made after the value specified in the parameter year.
+        </h3>
+        <ul *ngFor="let car of answer5b">
+           <li>
+             {{car.carMakeYear}}
+           </li>
+       </ul>
+       <hr>
 
-   </li>
-</ul>
-<hr>
+        <h3>6:Question :- Create a new array of objects by merging the following data by matching their IDs:</h3>
+        <ul>
+            <li *ngFor=" let transaction of answer6">
+                {{transaction.id}} has {{transaction.type}} {{transaction.date}} {{transaction.amount}}
+            </li>
+        </ul>
+        <hr>
 
-<h2>Create a new array of objects by merging the following data by matching their IDs:</h2>
-<ul>
-    <li *ngFor=" let transaction of answer6">
-        {{transaction.id}} has {{transaction.type}} {{transaction.date}} {{transaction.amount}}
+        <h3>7:Question :- Find the number of transaction in month of feb</h3>
+        <ul>
+            <li *ngFor="let transaction of answer7">
+                 {{transaction.id}} {{transaction.type}} {{transaction.date}} {{transaction.amount}}
+            </li> 
+        </ul>
+        <hr>
 
-    </li>
-</ul>
-<hr>
-
-<h3>Find the number of transaction in month of feb</h3>
-<ul>
-    <li *ngFor="let transaction of answer7">
-        {{transaction.id}} {{transaction.type}} {{transaction.date}} {{transaction.amount}}
-    </li>
-    
-</ul>
-<hr>
-
-<h2>Remove duplicates from the following array:</h2>
-<li>{{answer8}}</li>
+        <h3>8:Question :- Remove duplicates from the following array:</h3>
+         <li>{{answer8}}</li>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<h3>List Of Data</h3>
+<ul *ngFor="let d of data">
+  <li><strong>Name- </strong>{{d.name}}</li>
+  <li><strong>Age- </strong>{{d.age}}</li>
+  <li><strong>Average- </strong>{{d.average}}</li>
+  <li><strong>Description- </strong>{{d.description}}</li>
+</ul>
+<hr>
+<form class="d-flex">
+  <input type="button" class="btn-btn-light" value="Convert to pdf" (click)="convertToPDF()">
+  <input type="button" class="btn-btn-dark" value="Download data" (click)="filedownload()">
+</form>

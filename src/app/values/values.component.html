@@ -1,0 +1,12 @@
+
+<form [formGroup]="form">
+    <h4>Value Change</h4>
+  
+    <label>Miles</label>
+    <input type="number" class="form-control" formControlName="miles"> <br>
+    <label>Rate per mile</label>
+    <input type="number" value="{{ ratePermile }}" class="form-control" formControlName="rate"> <br>
+    <label>Total rate</label>
+    <input type="box" value="{{ initialRate }}" class="form-control" formControlName="total">
+  
+  </form>

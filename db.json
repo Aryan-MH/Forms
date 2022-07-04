@@ -1,0 +1,32 @@
+{
+  "productList": [
+    {
+      "productName": "Apple",
+      "category": "Fruits",
+      "date": "2022-06-29T18:30:00.000Z",
+      "freshness": "Dinner",
+      "price": 250,
+      "comment": "good",
+      "id": 1
+    },
+    {
+      "productName": "Carrot",
+      "category": "Vegetables",
+      "date": "2022-06-29T18:30:00.000Z",
+      "freshness": "Lunch",
+      "price": 300,
+      "comment": "good",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

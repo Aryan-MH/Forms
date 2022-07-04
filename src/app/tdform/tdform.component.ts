@@ -7,6 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./tdform.component.css']
 })
 export class TDFormComponent implements OnInit {
+  myName:string="";
 
   constructor() { }
 

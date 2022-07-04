@@ -1,21 +1,73 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8">
-      <h1>Home Page</h1>
-      <nav>
-        
-        <button><a routerLinkActive="active" routerLink="/tdform">TDForm</a></button>
-        <br>
-        <button btn-btn-primary><a routerLinkActive="active" routerLink="/rform">RTForm</a></button>
-        <br>
-        <button><a routerLinkActive="active" routerLink="/assignment">Assignment</a></button>
-      </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Training Material</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/productmanage">Product Manage</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Forms
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" routerLink="/tdform"> Template Driven</a>
+            </li>
+            <li><a class="dropdown-item" routerLink="/rform">Reactive</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/assignment">Assignment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/calculator">Calculator</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Decorators
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/parent">@Input</a></li>
+            <li><a class="dropdown-item" routerLink="/parentb">@Output</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/values">Value Change</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pdfconverter">Data Sheet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/flex">Flex</a>
+        </li>
+      </ul>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8">
-      
-    </div>
-  </div>
-</div>
+</nav>
 <router-outlet></router-outlet>

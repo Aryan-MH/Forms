@@ -1,0 +1,49 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.container {
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    max-width: 200;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: blueviolet;
+    padding: 5px;
+  }
+  .text {
+    background-color: yellowgreen;
+    margin-bottom: 8px;
+    padding-left: 25px;
+  }
+  
+  .container1 {
+    display: flex;
+    background-color: gold;
+    flex-wrap: wrap;
+    justify-content: right;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .container2 {
+    display: flex;
+    background-color: burlywood;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 5px;
+    text-align: center;
+  }
+  .background{
+    background-image : URL(assets/images/background.jpg);
+    background-size: cover;
+    background-size: 100%;
+  }
+  .single {
+    display: flex;
+    object-fit: cover;
+    object-position: left;
+    padding: 5px;
+  }
+  
